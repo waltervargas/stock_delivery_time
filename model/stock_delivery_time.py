@@ -40,7 +40,7 @@ class stock_delivery_time(osv.osv):
             help="Reference of the document"
             ),
         }
-    _order = 'date_done asc'
+    _order = 'datediff asc'
 
     def init(self, cr):
         tools.sql.drop_view_if_exists(cr, 'stock.delivery.time')
